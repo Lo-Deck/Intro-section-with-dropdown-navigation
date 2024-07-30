@@ -1,0 +1,361 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh; 
+    font-family: "Epilogue", sans-serif;
+    font-size: 1rem;    
+    font-optical-sizing: auto;
+    font-weight: 500; 
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#background{
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(240, 100%, 5%, 0.5);
+    z-index: 2;
+}
+
+img{
+    display: block;
+}
+
+.list{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #686868;
+}
+
+.container{
+    padding: 1.5rem 0;
+}
+
+
+/*HEADER*/
+
+.container-header{
+    max-width: 21.4375rem;
+    margin: 0 auto;
+}
+
+.display-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo-header{
+    width: 5.4375rem;
+    height: 1.75rem;
+}
+
+.button-menu{
+    width: 2rem;
+    height: 1.125rem;
+    background: transparent;
+    border-style: none;
+    z-index: 3; 
+}
+
+.button-menu:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+/*MENU*/
+
+.menu{
+    visibility: hidden;
+    display: block;
+    position: absolute;
+        top: 0; right: calc(50% - 12rem);
+    font-weight: 500;
+    text-align: left;
+    background: #fff;
+    width: 15rem;
+    height: 100%;
+    padding: 5rem 1rem 1rem 2rem;
+    z-index: 2;
+}
+
+.list-menu{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.arrow{
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+li:nth-of-type(1) .li-menu{
+    position: relative;
+    margin-left: 1.6rem;
+}
+
+li:nth-of-type(1) .li-menu::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+        top: -0.2rem; left: -1.6rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url(./images/icon-todo.svg) no-repeat;
+}
+
+li:nth-of-type(1) .li-menu:nth-child(2):before{
+    background: url(./images/icon-calendar.svg) no-repeat;
+}
+
+li:nth-of-type(1) .li-menu:nth-child(3):before{
+    background: url(./images/icon-reminders.svg) no-repeat;
+}
+
+li:nth-of-type(1) .li-menu:nth-child(4):before{
+    background: url(./images/icon-planning.svg) no-repeat;
+}
+
+.list-menu h2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin : 1rem 0 1rem;
+}
+
+.sub-menu{
+    display: none;
+    margin: 1.5rem 0 2rem 1.5rem;
+}
+
+.li-menu{
+    margin-bottom: 1.2rem;
+}
+
+.display-desktop-button{
+    margin-top: 2rem;
+}
+
+.listing-button{
+    width: 100%;
+    height: 3rem;
+    font-family: inherit;
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: #686868;
+    background: transparent;
+    border-style: none;
+    border-radius: 0.75rem;
+}
+
+.listing-button:nth-of-type(2){
+    border: 0.15rem solid #686868;
+}
+
+.listing-button:hover{
+    cursor: pointer;
+}
+
+/*ELEMENT*/
+
+.container-element{
+    padding: 1.5rem 0 5.875rem;
+}
+
+.main-image{
+    max-width: 23.4375rem;
+}
+
+.container-text{
+    max-width: 21.4375rem;
+    margin: 3.25rem auto 0;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 2.25rem;
+    letter-spacing: -0.031rem;
+    color: #000;  
+}
+
+.text{
+    color: #686868;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+.button{
+    width: 8.5rem;
+    height: 3rem;
+    background-color: #000;
+    color: #fff;
+    border-style: none;
+    border-radius: 0.75rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    border: 0.15rem solid #686868;
+}
+
+.container-logo{
+    max-width: 21.4375rem;
+    height: 1.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+
+@media screen and (min-width: 69.375rem)
+{
+
+    .container{
+        padding: 2rem 0;
+        width: 90rem;
+    }
+    
+    
+/*HEADER*/
+    
+    .container-header{
+        /*
+        width: 100%;
+        */
+        max-width: 90rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 4rem;
+        padding: 0 1rem;
+    }
+
+    .display-header{
+        display: block;
+        height: 1.75rem;
+        align-self: center;
+    }
+
+    .button-menu{
+        display: none;   
+    }
+
+
+/*MENU*/
+
+    .menu{
+        visibility: visible;
+        position: relative;
+            top: 0; right: 0;
+        margin: 0 0 0 5rem;
+        padding: 0;
+        display: flex; 
+        flex: 1;   
+    }
+
+    .list-menu{
+        display: flex;
+        justify-content: flex-start; 
+        column-gap: 2.25rem;
+        width: 100%;
+    }
+
+    .list-menu li{
+        position: relative;
+    }
+
+    .sub-menu{
+        margin: 0;
+        padding: 1.2rem 1.5rem 1rem;
+        position: absolute;
+            right: 0;
+        border-radius: 0.5rem;
+        box-shadow: 0.2rem 0.2rem 2rem hsla(0, 0%, 50%, 0.5),
+                    -0.2rem -0.2rem 2rem hsla(0, 0%, 50%, 0.5);
+    }
+
+    .list-menu li:nth-of-type(2) .sub-menu{
+        position: absolute;
+            left: 0;
+        padding: 1.2rem 1rem 1rem 1.5rem;
+        width: 7.25rem;
+    }
+
+    .display-desktop-button{
+        width: 11.375rem;
+        display: flex;
+        margin: 0;
+    }
+    
+
+/*ELEMENT*/
+
+    .container-element{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        padding: 0;
+        width: 69.375rem;
+        margin: 0 auto;
+    }
+
+    .image-container{
+        grid-column: 2;
+        grid-row: 1 / -1;
+        max-width: 30rem;
+        justify-self: end;
+    }
+
+    .main-image{
+        max-width: 30rem;      
+    }
+
+    .container-text{
+        grid-column: 1;
+        grid-row: 1;
+        max-width: 33.75rem;
+        text-align: left;
+        margin: 8rem 0 0 0;
+        padding: 0 4rem 0 0;
+    }
+
+    .text{
+        padding-right: 3rem;
+    }
+
+    .title{
+        font-weight: 700;
+        font-size: 4.5rem;
+        letter-spacing: -0.031rem;
+        color: #000;  
+    }
+
+    .container-logo{
+        grid-column: 1 ;
+        grid-row: 2;
+        max-width: 100%;
+        width: 29.875rem;
+        margin: 0;
+        align-self: end;
+    }
+
+
+}
+
